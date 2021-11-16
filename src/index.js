@@ -8,12 +8,14 @@ import Skills from "./components/Skills.jsx";
 import Footer from "./components/Footer.jsx";
 import About from "./components/About.jsx";
 import Projects from "./components/Projects.jsx";
+import Blogs from "./components/Blogs.jsx";
 
 ReactDOM.render(
   <React.StrictMode>
     <Layout>
       <Header/>
       <Projects/>
+      <Blogs/>
       <About/>
       <Skills/>
       <Footer/>

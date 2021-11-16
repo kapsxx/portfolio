@@ -8,6 +8,8 @@ import codeIcon from "../images/code.svg"
 import expressjsIcon from "../images/expressjs.svg"
 import mongodbIcon from "../images/mongodb.svg"
 import backendIcon from "../images/backend.svg"
+import nodeIcon from "../images/nodejs-icon.svg"
+import styledIcon from "../images/styled.svg"
 import styles from "../styles/Skills.module.css";
 
 const Skills = () => {
@@ -48,10 +50,15 @@ const Skills = () => {
           para:
             "MongoDb",
         },
+        // {
+        //   img: backendIcon,
+        //   para:
+        //     "Backend",
+        // },
         {
-          img: backendIcon,
+          img: nodeIcon,
           para:
-            "Backend",
+            "NodeJS",
         },
         {
             img: codeIcon,

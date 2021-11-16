@@ -12,10 +12,10 @@ import Typography from "@material-ui/core/Typography";
 import Fade from "react-reveal/Fade"
 import styles from "../styles/Projects.module.css";
 
-import olx from "../images/olx2.png";
-import splitTheBill3 from "../images/splitTheBill3.png";
-import rodanandfields from "../images/rodanandfields2.png";
-import goibibo from "../images/goibibo.png";
+import blog1 from "../images/blog1.jpeg";
+import blog2 from "../images/blog2.jpeg";
+import blog3 from "../images/blog3.jpeg";
+import blog4 from "../images/blog4.jpeg";
 // import project1 from "../images/html-css-javascript-lg.jpg";
 // import project2 from "../images/html-css-javascript.jpg";
 // import project3 from "../images/javascript-fullstack.jpg";
@@ -40,53 +40,43 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const myprojects = [
+const myblogs = [
   {
-    name: "Split The Bill",
-    description: `An end-to-end application that focuses on implementing the idea of separating a bill equally among different members of a group.`,
-    techStack: "HTML/CSS, JavaScript, React, Context-API, Material UI, Express, MongoDB, Mongoose",
-    image: splitTheBill3,
-    link: "https://github.com/kapsxx/split_the_bill",
-    demo: "https://kapil-pant-split-the-bill.vercel.app/"
+    name: "Never Promise More Than You Can Perform in JavaScript!",
+    description: `A small and basic explanation of promise and its states`,
+    image: blog1,
+    link: "https://kapilpant.medium.com/never-promise-more-than-you-can-perform-in-javascript-39f78a25d65"
   },
   {
-    name: "Goibibo Clone",
-    description: `Replicated www.goibibo.com along with bus booking feature (only for single route i.e., Mangalore to Bangalore) within 4 days`,
-    techStack: "HTML/CSS, JavaScript, React, Redux, Express, MongoDB",
-    image: goibibo,
-    link: "https://github.com/Dee-Hegde/goibibo_clone",
-    demo: "https://goibibo-project-dff906.netlify.app/"
+    name: "Local Storage isn’t too Local for JavaScript!",
+    description: `A clear-cut explanation of local storage along with some examples`,
+    image: blog2,
+    link: "https://kapilpant.medium.com/local-storage-isnt-too-local-for-javascript-58d32f35bc66"
   },
   {
-    name: "OLX Clone",
-    description: `Replicated www.olx.in along with special features such
-    as authentication and chat system within a week`,
-    techStack: "HTML/CSS, JavaScript, React, Redux, Firebase, Ant Design",
-    image: olx,
-    link: "https://github.com/kiranjolisa/team-carbon-olx-clone",
-    demo: "https://olx-clone-swart.vercel.app/"
+    name: "Prototypes in JavaScript are Not as Cool as The Ones You See in Auto Expo!",
+    description: `A lucid explanation on prototypes along with prototype chain in JavaScript`,
+    image: blog3,
+    link: "https://kapilpant.medium.com/prototypes-in-javascript-are-not-as-cool-as-the-ones-you-see-in-auto-expo-2bfe8b081a3f"
   },
   {
-    name: "Rodan+Fields Clone",
-    description: `Replicated www.rodanandfields.com using HTML/CSS and tried our level best to make it
-    a bit more interactive using DOM manipulations`,
-    techStack: "HTML/CSS, JavaScript",
-    image: rodanandfields,
-    link: "https://github.com/kapsxx/unit-2-project",
-    demo: "https://rodan-and-fields.vercel.app/"
+    name: "Wanna Know How Your First Front-End Project Will Look Like?",
+    description: `A brief explanation on how I concocted my first (group) project from rudimentary stage`,
+    image: blog4,
+    link: "https://kapilpant.medium.com/wanna-know-how-your-first-front-end-project-will-look-like-4ded1396b66c"
   }
 ];
 
-const Projects = () => {
+const Blogs = () => {
   const classes = useStyles();
   return (
 
       <>
-<div className={styles.section} id="projects">
+<div className={styles.section} id="blogs">
       <div className={styles.container}>
         <div className={styles.workwrapper}>
           <Fade bottom>
-            <h1>Projects</h1>
+            <h1>Blogs</h1>
           </Fade>
         </div>
       </div>
@@ -94,7 +84,7 @@ const Projects = () => {
     <Box component="div" className={classes.mainContainer}>
       <Grid container justify="center">
         {/* Projects */}
-        {myprojects.map((project, i) => (
+        {myblogs.map((project, i) => (
           <Grid item xs={10} sm={8} md={6} lg={4} key={i}>
             <Card className={classes.cardContainer}>
               <CardActionArea>
@@ -111,19 +101,19 @@ const Projects = () => {
                   <Typography variant="body2" color="textSecondary">
                     {project.description}
                   </Typography>
-                  <br />
-                  <Typography variant="body2" color="textSecondary">
+                  {/* <br /> */}
+                  {/* <Typography variant="body2" color="textSecondary">
                     <span style={{fontWeight: "900"}}>Tech Stack: </span> {project.techStack}
-                  </Typography>
+                  </Typography> */}
                 </CardContent>
               </CardActionArea>
               <CardActions>
                 <Button size="small" color="primary">
-                  <a style={{textDecoration: "none"}} target="_blank" href={project.link}>See Code</a>
+                  <a style={{textDecoration: "none"}} target="_blank" href={project.link}>See More</a>
                 </Button>
-                <Button size="small" color="primary">
-                  <a style={{textDecoration: "none"}} target="_blank" href={project.demo}>Live Demo</a>
-                </Button>
+                {/* <Button size="small" color="primary">
+                  Live Demo
+                </Button> */}
               </CardActions>
             </Card>
           </Grid>
@@ -134,4 +124,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Blogs;

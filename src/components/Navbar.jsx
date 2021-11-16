@@ -14,13 +14,14 @@ const Navbar = () => {
             className={styles.name}
             tabIndex={0}
           >
-            Portfolio.
+            {/* Portfolio. */}
           </div>
           <div className={styles.linkswrapper}>
             <button onClick={() => scrollTo("#projects")}>Projects</button>
+            <button onClick={() => scrollTo("#blogs")}>Blogs</button>
             <button onClick={() => scrollTo("#about")}>About</button>
             <button onClick={() => scrollTo("#contact")}>Contact</button>
-            <button> <a href={resume} download="Kapil_Pant_Resume">Resume</a> </button>
+            <button style={{border: "2px solid #ff7a7a", borderRadius: "8px", marginLeft: "5px"}}> <a href={resume} download="Kapil_Pant_Resume">Resume</a> </button>
           </div>
         </div>
       </div>
